@@ -6,6 +6,8 @@ public class August10 {
 
 	public static void main(String[] args) {
 
+		/* 백준 15552 */
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int roop = sc.nextInt();
