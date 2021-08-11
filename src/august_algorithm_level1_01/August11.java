@@ -49,6 +49,33 @@ public class August11 {
 		
 		}
 		
+		/* 백준 11022 */
+		
+		//Case #1: 1 + 1 = 2
+		
+		Scanner sc4 = new Scanner(System.in);
+		
+		int roop4 = sc3.nextInt();
+	
+		int[] sum1 = new int[roop4];
+		
+		for(int h = 0; h < roop4; h++) {
+			
+			int num1 = sc4.nextInt();
+			int num2 = sc4.nextInt();
+			
+			sum1[h] += num1 + num2; 
+			sum1[h+1] += num1;
+			sum1[h+2] += num2;
+ 			
+		}
+		
+		for(int h = 0; h < roop3 + 1; h++) {
+			
+			System.out.println("Case #"+ (h+1) + ": " + sum1[h+1] + " + " + sum1[h+2] + " = " + sum1[h] );
+		
+		}
+		
 	}
 
 }
