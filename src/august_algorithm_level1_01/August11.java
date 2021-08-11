@@ -26,6 +26,28 @@ public class August11 {
 			System.out.println(roop2-j);
 		}
 		
+		/* 백준 11021 */
+		
+		Scanner sc3 = new Scanner(System.in);
+		
+		int roop3 = sc3.nextInt();
+	
+		int[] sum = new int[roop3];
+		
+		for(int h = 0; h < roop3; h++) {
+			
+			int num1 = sc3.nextInt();
+			int num2 = sc3.nextInt();
+			
+			sum[h] += num1 + num2; 
+			
+		}
+		
+		for(int h = 0; h < roop3; h++) {
+			
+			System.out.println("Case #"+ (h+1) + ": " + sum[h] );
+		
+		}
 		
 	}
 
