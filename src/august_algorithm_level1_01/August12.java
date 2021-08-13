@@ -61,6 +61,7 @@ public class August12 {
 			if (array[j] < num2) {
 				System.out.print(array[j]);
 				System.out.print(" ");
+				System.out.print(" ");
 			}
 			
 		}
