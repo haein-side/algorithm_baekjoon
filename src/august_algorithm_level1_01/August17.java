@@ -39,7 +39,7 @@ public class August17 {
 			
 		}
 		
-		System.out.println("사이클 : " + roop);
+		System.out.println(roop);
 		
 	}
 }
