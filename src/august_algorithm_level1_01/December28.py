@@ -39,3 +39,19 @@ print(f'max3(2, 3, 2) = {max3(2, 3, 2)}')   # [J] b > a = c
 print(f'max3(1, 3, 2) = {max3(1, 3, 2)}')   # [K] b > c > a
 print(f'max3(2, 3, 3) = {max3(2, 3, 3)}')   # [L] b = c > a
 print(f'max3(1, 2, 3) = {max3(1, 2, 3)}')   # [M] c > b > a
+
+# 세 정수를 입력받아 중앙값 구하기
+
+a = int(input('정수 a의 값을 입력하세요 : '))
+b = int(input('정수 b의 값을 입력하세요 : '))
+c = int(input('정수 c의 값을 입력하세요 : '))
+
+def med3(a,b,c) :
+    medium = [a,b,c]
+    minNum = min(a,b,c)
+    maxNum = max(a,b,c)
+    d = medium.index(minNum)
+    f = medium.index(maxNum)
+    return medium[3-d-f]
+    
+print(f'중앙값은 {med3(a,b,c)} 입니다')
