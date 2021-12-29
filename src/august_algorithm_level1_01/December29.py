@@ -59,3 +59,40 @@ for i in range(min, max+1) :
     
 print(f"{a}부터 {b}까지의 정수의 합은 {sum}입니다.")
 
+# 실습 1-12
+
+print("+와 -를 번갈아 출력합니다.")
+
+n = int(input('몇 개를 출력할까요?: '))
+
+for i in range (n):
+    if i % 2 != 0:
+        print('-',end='')
+    else :
+        print('+',end='')
+        
+# 실습 1-14
+print('*를  출력합니다') 
+
+n = int(input('몇 개를 출력할까요?: '))
+w = int(input('몇 개마다 줄바꿈할까요: '))
+
+# print(n//w)
+# print(n/w)
+# print(n%w)
+
+if n <= w :
+    print('*'*n)
+else :
+    for i in range (n//w):
+        print('*'*w)
+print('*'*(n%w))
+
+# 실습 1-16
+print('1부터 n까지 정수의 합을 구함')
+
+while True :
+    n = int(input('n값을 입력하세요 :'))
+    if n > 0 :
+        break
+           
