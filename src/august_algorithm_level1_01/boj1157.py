@@ -62,16 +62,30 @@
 
 
 # 1157번 : 단어 공부
-word = input().lower()      # word = mississipi / baaa
-word_list = list(set(word)) # word_list = ['p', 'm', 'i', 's'] / ['b', 'a']
-print(word_list)
+# word = input().lower()      # word = mississipi / baaa
+# word_list = list(set(word)) # word_list = ['p', 'm', 'i', 's'] / ['b', 'a']
+# print(word_list)
 
-cnt = []
+# cnt = []
 
-for i in word_list:         # i = p, m, i, s / b, a
-    count = word.count(i)
-    cnt.append(count)       # cnt = [1, 1, 4, 4] / [1, 3]
-if cnt.count(max(cnt)) >= 2: # max인 것의 갯수가 2개 이상이면 ? 출력
-    print("?")
-else:
-    print(word_list[(cnt.index(max(cnt)))].upper())
+# for i in word_list:         # i = p, m, i, s / b, a
+#     count = word.count(i)
+#     cnt.append(count)       # cnt = [1, 1, 4, 4] / [1, 3]
+# if cnt.count(max(cnt)) >= 2: # max인 것의 갯수가 2개 이상이면 ? 출력
+#     print("?")
+# else:
+#     print(word_list[(cnt.index(max(cnt)))].upper())
+
+# 다시 풀어보기
+word = input().lower() # mississipi
+word_list = list(set(word)) #[s,i,m,p]
+
+cnt = [None] * len(word_list)
+
+for i in range(len(word_list)) :
+  cnt[i] = word.count(word_list[i]) #[4,4,1,1]
+  
+if cnt.count(max(cnt)) >= 2 :
+  print("?")
+else :
+  print(word_list[cnt.index(max(cnt))].upper())
