@@ -3,7 +3,8 @@ while True :
     a = input()
     if a == '0' :
         break
-    n.append(a)
+    n.append(a)   
+    
 
 for i in range(len(n)) :
     count = 0
