@@ -24,14 +24,18 @@ def hanoi(n, start, destination, via):
 
     count = 0
     # 원반 n-1개를 시작 기둥에서 보조 기둥으로 이동
-    count += hanoi(n - 1, start, via, destination)
+    # 원반을 옮길 때 한번에 한개씩만 옮길 수 있으므로 원반이 1개만 남을 때까지 계속 재귀를 실행
+    # 마침내 원반이 1개만 남았을 때 1을 리턴해주는 것
+    count += hanoi(n - 1, start, via, destination) # hanoi 에서 리턴한 1들을 하나씩 count에 저장함
 
     # 가장 큰 원반을 시작 기둥에서 도착 기둥으로 이동
     count += 1
     move(n, start, destination)
 
     # 원반 n-1개를 보조 기둥에서 도착 기둥으로 이동
-    count += hanoi(n - 1, via, destination, start)
+    # 원반을 옮길 때 한번에 한개씩만 옮길 수 있으므로 원반이 1개만 남을 때까지 계속 재귀를 실행
+    # 마침내 원반이 1개만 남았을 때 1을 리턴해주는 것
+    count += hanoi(n - 1, via, destination, start) # hanoi 에서 리턴한 1들을 하나씩 count에 저장함
 
     return count
 
