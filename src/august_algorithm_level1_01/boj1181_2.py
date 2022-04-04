@@ -10,7 +10,9 @@ n = int(sys.stdin.readline())
 for i in range(n):
     w = sys.stdin.readline().strip()
     nlist[len(w)] = nlist.get(len(w)) + [w]
-    
+
+print(nlist)  
+  
 for i in range(51):
     if len(nlist.get(i)) > 0:
         nlist[i] = set(nlist[i]) # 중복제거
