@@ -8,7 +8,7 @@ for i in range(n):
     a = sys.stdin.readline().strip()
     nlist.append(a)
 
-data = list(permutations(nlist, k))
+data = list(permutations(nlist, k)) # 순열 (순서 생각)
 dict = {}
 
 for i in range(len(data)):
