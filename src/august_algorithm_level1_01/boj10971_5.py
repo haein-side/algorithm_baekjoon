@@ -25,9 +25,8 @@ def dfs(start, cur, cost):
             # 상향식 분석으로 봤을 때, cost에 matrix[cur][i]가 계속 쌓임! (누적됨)
             dfs(start, i, cost+matrix[cur][i])
             # 재귀가 끝났을 때 전역변수인 visit[i]를 False로 초기화해둬야 다음 인접노드 돌 때 잘 돎
-            # 재귀가 끝났을 때 i가 현재 있는 위치이므로 계속 False를 만들어주면서 돌아감(?)
             visit[i] = False
-            # 재귀가 끝나면 다음 코드가 실행되므로 False를 해주는 거시ㅣㅣ
+            # 재귀가 끝나면 다음 코드가 실행되므로 False를 하나씩 실행해주면서 모두 False로 만들어줌!
     
 dfs(0, 0, 0)
 print(minCost)

@@ -15,15 +15,16 @@ def search(queen: list, row: int):
         queen[row] = col
         if check(queen, row):
             count += search(queen, row + 1)
+            
     return count
 
 
 def check(queen: list, row: int):
     for i in range(row):
         if queen[i] == queen[row] or abs(queen[i] - queen[row]) == row - i:
-            return False
+            return False # 방문할 수 없으면 False
 
-    return True
+    return True # 방문할 수 있으면 True
 
 n = int(sys.stdin.readline())
 print(solution(n))
