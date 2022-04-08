@@ -21,6 +21,7 @@ def bsearch(start, end, target): # mid는 절단기의 길이
     if a < target:
         end = mid - 1
     
-    return bsearch(start, end, target)
+    # 해당 함수 자체에서 리턴값이 mid 아니면 end였으므로 그 리턴값을 가져오는 것
+    return bsearch(start, end, target) # 제일 처음에 돌 때 리턴해주는 값이 있어야 하므로 (절단기 길이인 mid값) return하는 것
     
 print(bsearch(0, max(tlist), m))
