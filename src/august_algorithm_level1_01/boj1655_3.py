@@ -8,7 +8,7 @@ rightheap = []
 for i in range(N):
     n = int(sys.stdin.readline())
 
-    if len(leftheap) == len(rightheap):
+    if len(leftheap) == len(rightheap): # 번갈아 가면서 leftheap과 rightheap에 넣어줌
         heapq.heappush(leftheap, (-n, n))
     else:
         heapq.heappush(rightheap, (n, n))
