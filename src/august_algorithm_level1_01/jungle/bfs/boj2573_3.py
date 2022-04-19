@@ -19,6 +19,7 @@ def bfs(x, y):
     
     # 0으로 만들어줘야 하는 좌표 리스트
     rlist = []
+    
     while queue :
         x, y = queue.popleft()
         selected += 1 # 빙하 수에 + 1
