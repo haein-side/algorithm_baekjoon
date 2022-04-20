@@ -37,7 +37,7 @@ for i in range(T):
         return True
     
     # bfs(1) # 시작노드를 1로 하고 한 번만 호출하면 되나? - 안됨!
-    # 노드 하나씩 bfs를 호출해야 함 <- 왜?
+    # 노드 하나씩 bfs를 호출해야 함 : 여러 개의 사이클이 있을 수 있기 때문!
     for e in range(1, V+1):
         if not visited[e]: # 방문한 정점이 아니라면, bfs 수행
             result = bfs(e) # 
