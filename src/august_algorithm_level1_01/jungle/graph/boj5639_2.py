@@ -15,6 +15,7 @@ def postorder(left,right):
     if left>right:
         return
     else:
+        # mid를 찾기 위해 루트 노드보다 커지는 노드가 있으면 mid를 갱신해주는 것
         for i in range(left+1,right+1): # 루트 노드인 left 노드를 빼고 right 노드 인덱스까지 돎
             
             #현재 원소가 루트 노드보다 크다면 그 전까지는 왼쪽 서브 트리,
