@@ -11,9 +11,9 @@ needed = [[0 for _ in range(n+1)] for _ in range(n+1)]
 basics = []
 
 for _ in range(m):
-    x, y, k = map(int, sys.stdin.readline().rstrip().split())
+    x, y, k = map(int, sys.stdin.readline().rstrip().split()) # y로 x에 도달하는 데 k개가 듦
     nodes[y].append([x, k])
-    in_degree[x] += 1
+    in_degree[x] += 1 # x의 진입차수가 올라감
 
 queue = deque()
 
@@ -35,7 +35,7 @@ while queue:
                 needed[next_node][i] += needed[cur_node][i] * next_cost
                 # next_node를 만들기 위한 cur_node(중간/최종 부품)은 cur_node를 만들기 위한 기본 부품을 각각 더해준다.
 
-        in_degree[next_node] -= 1
+        in_degree[next_node] -= 1 # 인접한 노드의 진입 차수를 1 빼서 0이 되면 큐에 append해줌
         if in_degree[next_node] == 0:
             queue.append(next_node)
 

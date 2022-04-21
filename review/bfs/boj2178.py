@@ -15,7 +15,6 @@ dy = [0, 0, 1, -1]
 
 
 def bfs(x, y):
-    global cnt
     q = deque()
     q.append((x,y))
     visited[x][y] = True

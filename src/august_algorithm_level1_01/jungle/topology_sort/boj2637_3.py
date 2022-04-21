@@ -60,6 +60,6 @@ def topology_sort():
         
     return needs
     
-    
+print(node)
 
 print(topology_sort())

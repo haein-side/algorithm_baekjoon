@@ -21,7 +21,8 @@ def bfs():              # 사실 다익스트라
         if distance[r][c] <= cost:
             continue
         else:
-            distance[r][c] = cost
+            distance[r][c] = cost 
+            # 한개씩 pop을 하면서 distance 테이블의 값을 갱신해줌
 
         for i in range(4):
             nx = r + dx[i]

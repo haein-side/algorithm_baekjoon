@@ -1,3 +1,4 @@
+# 73점 풀이
 from collections import deque
 import sys 
 N, M = map(int, sys.stdin.readline().split())
@@ -52,8 +53,7 @@ def bfs(x, y):
     return selected # bfs로 너비 우선 탐색된 빙하의 수를 리턴해줌
     
         
-# 총 사이클 도는 횟수 
-result = 0 
+
 year = 0           
 for i in range(N):
     for j in range(M):

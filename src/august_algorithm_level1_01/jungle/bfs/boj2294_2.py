@@ -32,3 +32,4 @@ while queue:
 
 if not flag:
     print(-1)
+    
