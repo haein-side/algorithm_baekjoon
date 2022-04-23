@@ -19,5 +19,5 @@ for d in range(1, n): # d번째 대각선                      # d:1
         
         dp[i][j] = 2 ** 32
         for k in range(i, j):                            # k는 i와 j-1 중 하나 (dp[i][j]는 i부터 j번까지 행렬곱 중 최소 곱셈 횟수)
-            dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j] + s[i][0] * s[k][1] * s[j][1])
+            dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j] + s[i][0] * s[k+1][0] * s[j][1])
 print(dp[0][n - 1])
