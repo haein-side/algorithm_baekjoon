@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 n, k = map(int, input().split())
 coins = set(int(input()) for _ in range(n))
-visited = [0 for _ in range(k+1)] # 방문 시 1, 미방문 시 0
+visited = [0 for _ in range(k+1)] # 방문 시 1, 미방문 시 0 // 인덱스가 동전의 총합
 
 queue = deque()
 
