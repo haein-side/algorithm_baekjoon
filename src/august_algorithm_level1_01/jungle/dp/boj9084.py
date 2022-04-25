@@ -21,6 +21,8 @@ for i in range(T):
     for i in coins: # 동전 i로
         for j in range(i, k+1): # 동전의 합을 j로 만들어줄 때 (i이상의 합을 만들어줄 수 있음)
             dp[j] += dp[j-i]
+        print(dp)
     
+    # print(dp)
     print(dp[k])
     
