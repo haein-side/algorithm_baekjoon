@@ -16,5 +16,5 @@ for i in range(1, n+1):
             dp[i][j] = dp[i-1][j]
         else:
             dp[i][j] = max(value + dp[i-1][j-weight], dp[i-1][j]) # i가 행으로 i-1 아직 내꺼 안 넣었을 때 j는 무게
-
+# print(dp)
 print(dp[n][k])
