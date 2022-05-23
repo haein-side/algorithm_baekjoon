@@ -15,7 +15,6 @@ def sol():
         for j in range(coin, k+1): #coin은 coin부터 k까지 합을 만들 수 있음
             dp[j] += dp[j-coin]
            
-
     print(dp[k])
 
 for _ in range(t):
